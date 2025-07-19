@@ -64,3 +64,8 @@ module "lb_controller_role" {
     }
   }
 }
+module "eks" {
+  # ... other configs
+  enable_cluster_creator_admin_permissions = true
+  cluster_enabled_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+}
